@@ -38,37 +38,29 @@ var config = {
     },
   },
   blockchainExplorerOpts: {
-    btc: {
-      livenet: {
-        provider: 'insight',
-        url: 'https://insight.bitpay.com:443',
-      },
-      testnet: {
-        provider: 'insight',
-        url: 'https://test-insight.bitpay.com:443',
-        // url: 'http://localhost:3001',
-        // Multiple servers (in priority order)
-        // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
-      },
+    livenet: {
+      provider: 'insight',
+      url: 'https://insight.bitpay.com:443',
     },
-    bch: {
-      livenet: {
-        provider: 'insight',
-        url: 'https://cashexplorer.bitcoin.com',
-      },
+    testnet: {
+      provider: 'insight',
+      url: 'https://test-insight.bitpay.com:443',
+      // url: 'http://localhost:3001',
+      // Multiple servers (in priority order)
+      // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
     },
   },
   pushNotificationsOpts: {
     templatePath: './lib/templates',
     defaultLanguage: 'en',
-    defaultUnit: 'btc',
+    defaultUnit: 'nav',
     subjectPrefix: '',
     pushServerUrl: 'https://fcm.googleapis.com/fcm',
     authorizationKey: '',
   },
   fiatRateServiceOpts: {
-    defaultProvider: 'BitPay',
-    fetchInterval: 60, // in minutes
+    defaultProvider: 'coinmarketcap',
+    fetchInterval: 15, // in minutes
   },
   // To use email notifications uncomment this:
   // emailOpts: {
